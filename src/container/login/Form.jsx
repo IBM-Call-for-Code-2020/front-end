@@ -39,14 +39,15 @@ function LoginFormContainer(props) {
         placeholder="Email"
         value={loginFrmData.email}
         onChange={onChange}
+        required
         icon={MdMail}
       />
-
       <Input
         type="password"
         placeholder="Password"
         value={loginFrmData.password}
         onChange={onChange}
+        required
         icon={MdLock}
       />
 
