@@ -1,4 +1,7 @@
 import React, { useCallback, useState } from 'react'
+import { MdMail, MdLock } from 'react-icons/md'
+import Input from 'component/login/Input'
+import { Form, Container } from 'module/login'
 
 function LoginFormContainer(props) {
   const { onLogin = () => {} } = props
@@ -30,19 +33,21 @@ function LoginFormContainer(props) {
   )
 
   return (
-    <form onSubmit={onSubmit}>
-      <input
+    <Form onSubmit={onSubmit}>
+      <Input
         type="email"
         placeholder="Email"
         value={loginFrmData.email}
         onChange={onChange}
+        icon={MdMail}
       />
 
-      <input
+      <Input
         type="password"
         placeholder="Password"
         value={loginFrmData.password}
         onChange={onChange}
+        icon={MdLock}
       />
 
       <label htmlFor="rember-me">
@@ -50,7 +55,7 @@ function LoginFormContainer(props) {
       </label>
 
       <button type="submit">Login</button>
-    </form>
+    </Form>
   )
 }
 
