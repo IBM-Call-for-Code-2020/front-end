@@ -8,22 +8,19 @@ describe('Form', () => {
     const { getByText, getByPlaceholderText } = utils
     const email = getByPlaceholderText('Email')
     const password = getByPlaceholderText('Password')
-    const remember = getByText('Remember me')
     const button = getByText('Login')
     return {
       ...utils,
       email,
       password,
-      remember,
       button,
     }
   }
 
   it('should render correctly', () => {
-    const { email, password, remember, button } = setup()
+    const { email, password, button } = setup()
     expect(email).toBeTruthy()
     expect(password).toBeTruthy()
-    expect(remember).toBeTruthy()
     expect(button).toBeTruthy()
   })
 
@@ -68,6 +65,7 @@ describe('Form', () => {
     expect(onLogin).toBeCalledWith({
       email: 'pinot.kim@kakao.com',
       password: 'password',
+      remember: false,
     })
 
     expect(email).toHaveAttribute('value', '')

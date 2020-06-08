@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import { MdMail, MdLock } from 'react-icons/md'
 import Input from 'component/login/Input'
+import Remember from 'component/login/Remember'
 import Button from 'component/login/Submit'
 import Form from 'module/login'
 
@@ -10,9 +11,11 @@ function LoginFormContainer(props) {
   const inital = {
     email: '',
     password: '',
+    remember: false,
   }
 
   const [loginFrmData, setLoginFrmData] = useState(inital)
+  const { email, password, remember } = loginFrmData
 
   const onChange = useCallback(
     (e) => {
@@ -22,6 +25,11 @@ function LoginFormContainer(props) {
       })
     },
     [loginFrmData],
+  )
+
+  const onToggle = useCallback(
+    (e) => setLoginFrmData({ ...loginFrmData, remember: e }),
+    [],
   )
 
   const onSubmit = useCallback(
@@ -38,7 +46,7 @@ function LoginFormContainer(props) {
       <Input
         type="email"
         placeholder="Email"
-        value={loginFrmData.email}
+        value={email}
         onChange={onChange}
         required
         icon={MdMail}
@@ -46,13 +54,13 @@ function LoginFormContainer(props) {
       <Input
         type="password"
         placeholder="Password"
-        value={loginFrmData.password}
+        value={password}
         onChange={onChange}
         required
         icon={MdLock}
       />
 
-      <div>Remember me</div>
+      <Remember onToggle={onToggle} show={remember} />
 
       <Button />
     </Form>
