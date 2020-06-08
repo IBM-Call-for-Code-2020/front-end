@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react'
+import Logo from 'component/login/Logo'
 import Form from 'container/login/Form'
 
 function LoginPage() {
@@ -8,9 +9,7 @@ function LoginPage() {
 
   return (
     <div>
-      <div>
-        <img src="https://placekitten.com/500/500" alt="chat-bot logo" />
-      </div>
+      <Logo />
 
       <Form onLogin={onLogin} />
 
