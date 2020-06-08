@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import { MdMail, MdLock } from 'react-icons/md'
 import Input from 'component/login/Input'
+import Button from 'component/login/Submit'
 import Form from 'module/login'
 
 function LoginFormContainer(props) {
@@ -53,7 +54,7 @@ function LoginFormContainer(props) {
 
       <div>Remember me</div>
 
-      <button type="submit">Login</button>
+      <Button />
     </Form>
   )
 }
