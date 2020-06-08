@@ -13,10 +13,7 @@ const LoginInputContainerModule = styled.div`
     linear-gradient(to top, #aaffa9, #11ffbd);
   background-origin: border-box;
   background-clip: content-box, border-box;
-
-  &:not(:last-child) {
-    margin-bottom: 14px;
-  }
+  margin-bottom: 22px;
 `
 
 const LoginIconContainerModule = styled.span`
