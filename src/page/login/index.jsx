@@ -1,29 +1,10 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
+import Form from 'container/login/Form'
 
 function LoginPage() {
-  const inital = {
-    email: '',
-    password: '',
-  }
-  const [loginFrmData, setLoginFrmData] = useState(inital)
-
-  const onChange = useCallback(
-    (e) => {
-      setLoginFrmData({
-        ...loginFrmData,
-        [e.target.type]: e.target.value,
-      })
-    },
-    [loginFrmData],
-  )
-
-  const onSubmit = useCallback(
-    (e) => {
-      e.preventDefault()
-      setLoginFrmData(inital)
-    },
-    [inital],
-  )
+  const onLogin = useCallback((e) => {
+    console.log(e)
+  }, [])
 
   return (
     <div>
@@ -31,25 +12,7 @@ function LoginPage() {
         <img src="https://placekitten.com/500/500" alt="chat-bot logo" />
       </div>
 
-      <form onSubmit={onSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={loginFrmData.email}
-          onChange={onChange}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={loginFrmData.password}
-          onChange={onChange}
-        />
-
-        <label htmlFor="rember-me">Remeber me</label>
-        <input type="checkbox" id="rember-me" name="rember-me" />
-
-        <button type="submit">Login</button>
-      </form>
+      <Form onLogin={onLogin} />
 
       <div>
         <span>Or login with</span>
