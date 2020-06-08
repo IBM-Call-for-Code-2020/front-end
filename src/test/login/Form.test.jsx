@@ -5,10 +5,10 @@ import Form from 'container/login/Form'
 describe('Form', () => {
   const setup = (props = {}) => {
     const utils = render(<Form {...props} />)
-    const { getByText, getByPlaceholderText, getByLabelText } = utils
+    const { getByText, getByPlaceholderText } = utils
     const email = getByPlaceholderText('Email')
     const password = getByPlaceholderText('Password')
-    const remember = getByLabelText('Remember me')
+    const remember = getByText('Remember me')
     const button = getByText('Login')
     return {
       ...utils,

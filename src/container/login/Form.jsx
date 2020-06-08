@@ -50,9 +50,7 @@ function LoginFormContainer(props) {
         icon={MdLock}
       />
 
-      <label htmlFor="rember-me">
-        Remember me <input type="checkbox" id="remember-me" name="rember-me" />
-      </label>
+      <div>Remember me</div>
 
       <button type="submit">Login</button>
     </Form>
