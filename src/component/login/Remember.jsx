@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react'
 import { IoMdCheckmark } from 'react-icons/io'
+import { Toggle, Indicator } from 'module/login/Toggle'
 
 function LoginFormRememberComponent(props) {
   const { onToggle = () => {}, show = false } = props
@@ -7,10 +8,12 @@ function LoginFormRememberComponent(props) {
   const onClick = useCallback(() => onToggle(!show), [show])
 
   return (
-    <div onClick={onClick}>
-      <span>{show ? <IoMdCheckmark /> : ''}</span>
+    <Toggle onClick={onClick}>
+      <Indicator active={show}>
+        <IoMdCheckmark />
+      </Indicator>
       Remember me
-    </div>
+    </Toggle>
   )
 }
 
