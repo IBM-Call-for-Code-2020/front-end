@@ -1,11 +1,12 @@
 import React from 'react'
 import Logo from 'modules/login/logo/Image'
 import Container from 'modules/login/logo'
+import logo from 'static/logo.svg'
 
 function LoginLogoComponent() {
   return (
     <Container>
-      <Logo src="https://placekitten.com/500/500" alt="chat-bot logo" />
+      <Logo src={logo} alt="chat-bot logo" />
     </Container>
   )
 }
