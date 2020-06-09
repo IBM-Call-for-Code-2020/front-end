@@ -12,6 +12,13 @@ const ChatBubbleBotModule = styled(Bubble)`
   background-origin: border-box;
   background-clip: content-box, border-box;
 
+  ${({ loading }) =>
+    loading &&
+    `
+    width : 100px;
+    height: 40px;
+   `}
+
   div {
     padding: 11px 14px;
   }

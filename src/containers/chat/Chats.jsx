@@ -12,7 +12,7 @@ function ChatListsContainer(props) {
 
       <User>Carbon tax?</User>
 
-      <Bot>
+      <Bot loading>
         Hi there! I am Carbon Kim, here to help with your carbon tax support.
         What can I help you with today?
       </Bot>
