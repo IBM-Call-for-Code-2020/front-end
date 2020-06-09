@@ -1,17 +1,14 @@
 import React from 'react'
+import Container from 'modules/chat'
+import Chats from 'containers/chat/Chats'
+import Form from 'containers/chat/Form'
 
 function ChatPage() {
   return (
-    <div>
-      <div>this is bot chat</div>
-
-      <div>this is your chat</div>
-
-      <form>
-        <input type="text" />
-        <button>입력</button>
-      </form>
-    </div>
+    <Container>
+      <Chats />
+      <Form />
+    </Container>
   )
 }
 
