@@ -7,9 +7,10 @@ const LoginFormButtonModule = styled.button`
   width: 100%;
   border-radius: 50px;
   font-size: 1em;
-  color: #bfbfbf;
+  color: #fff;
   font-weight: 900;
   cursor: pointer;
+  margin-bottom: 15px;
 
   &:focus {
     outline: none;
@@ -23,7 +24,7 @@ const LoginSocialButtonModule = styled.button`
   justify-content: center;
   border-radius: 5px;
   background-color: ${(props) => props.color.background};
-  color: #000;
+  color: #fff;
   border: none;
   font-size: 17px;
   font-weight: 900;
