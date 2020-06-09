@@ -4,7 +4,7 @@ const LoginFormToggleModule = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 85px;
+  margin-bottom: 25px;
   cursor: pointer;
   color: #8c8c8c;
 `

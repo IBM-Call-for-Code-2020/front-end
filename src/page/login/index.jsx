@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react'
+import Container from 'module/login'
 import Logo from 'component/login/Logo'
 import Form from 'container/login/Form'
 import Social from 'container/login/Social'
@@ -9,11 +10,11 @@ function LoginPage() {
   }, [])
 
   return (
-    <div>
+    <Container>
       <Logo />
       <Form onLogin={onLogin} />
       <Social />
-    </div>
+    </Container>
   )
 }
 

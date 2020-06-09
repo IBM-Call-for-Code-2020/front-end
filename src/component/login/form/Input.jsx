@@ -1,7 +1,7 @@
 import React from 'react'
-import { Container, Icon, Input } from 'module/login/Input'
+import { Container, Icon, Input } from 'module/login/form/Input'
 
-function LoginInputComponent(props) {
+function LoginFormInputComponent(props) {
   const { icon } = props
 
   return (
@@ -12,4 +12,4 @@ function LoginInputComponent(props) {
   )
 }
 
-export default LoginInputComponent
+export default LoginFormInputComponent

@@ -16,7 +16,7 @@ const LoginInputContainerModule = styled.div`
   margin-bottom: 22px;
 `
 
-const LoginIconContainerModule = styled.span`
+const LoginInputIconWrapperModule = styled.span`
   margin: 11px 40px;
 `
 
@@ -30,6 +30,6 @@ const LoginInputModule = styled.input`
 
 export {
   LoginInputContainerModule as Container,
-  LoginIconContainerModule as Icon,
+  LoginInputIconWrapperModule as Icon,
   LoginInputModule as Input,
 }

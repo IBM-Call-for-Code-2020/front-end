@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
-import { SocialLogo } from 'module/login/Logo'
-import { Login } from 'module/login/Button'
-import { Text } from 'module/login/Text'
+import SocialLogo from 'module/login/social/Logo'
+import Button from 'module/login/social/Button'
+import { Text } from 'module/login/social/Text'
 
 function LoginSocialButtonComponent(props) {
   const {
@@ -21,10 +21,10 @@ function LoginSocialButtonComponent(props) {
   }, [name])
 
   return (
-    <Login onClick={onClick} color={color}>
+    <Button onClick={onClick} color={color}>
       <SocialLogo src={logo} alt={`${name} logo`} />
       <Text>login with {name}</Text>
-    </Login>
+    </Button>
   )
 }
 

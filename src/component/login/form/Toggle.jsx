@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import { IoMdCheckmark } from 'react-icons/io'
-import { Toggle, Indicator } from 'module/login/Toggle'
+import { Toggle, Indicator } from 'module/login/form/Toggle'
 
 function LoginFormRememberComponent(props) {
   const { onToggle = () => {}, show = false } = props
