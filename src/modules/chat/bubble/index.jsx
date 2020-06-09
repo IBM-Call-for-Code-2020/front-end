@@ -5,10 +5,6 @@ const ChatBubbleModule = styled.div`
   width: fit-content;
   max-width: 220px;
   word-break: keep-all;
-
-  &:not(:last-child) {
-    margin-bottom: 18px;
-  }
 `
 
 const ChatBubbleContentModule = styled.div``
