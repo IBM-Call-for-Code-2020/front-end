@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Icon, Input } from 'module/login/form/Input'
+import { Container, Icon, Input } from 'modules/login/form/Input'
 
 function LoginFormInputComponent(props) {
   const { icon } = props

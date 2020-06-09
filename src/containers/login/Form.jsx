@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from 'react'
 import { MdMail, MdLock } from 'react-icons/md'
-import Form from 'module/login/form'
-import Input from 'component/login/form/Input'
-import Remember from 'component/login/form/Toggle'
-import Button from 'component/login/form/Submit'
+import Form from 'modules/login/form'
+import Input from 'components/login/form/Input'
+import Remember from 'components/login/form/Toggle'
+import Button from 'components/login/form/Submit'
 
 function LoginFormContainer(props) {
   const { onLogin = () => {} } = props

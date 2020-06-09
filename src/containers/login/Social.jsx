@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
-import Button from 'component/login/Social'
-import { Info } from 'module/login/social/Text'
+import Button from 'components/login/Social'
+import { Info } from 'modules/login/social/Text'
 
 function LoginSocialContainer(props) {
   const { onLogin = () => {} } = props

@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from 'module/login/logo/Image'
-import Container from 'module/login/logo'
+import Logo from 'modules/login/logo/Image'
+import Container from 'modules/login/logo'
 
 function LoginLogoComponent() {
   return (

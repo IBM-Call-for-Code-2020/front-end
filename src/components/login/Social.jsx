@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
-import SocialLogo from 'module/login/social/Logo'
-import Button from 'module/login/social/Button'
-import { Text } from 'module/login/social/Text'
+import SocialLogo from 'modules/login/social/Logo'
+import Button from 'modules/login/social/Button'
+import { Text } from 'modules/login/social/Text'
 
 function LoginSocialButtonComponent(props) {
   const {
