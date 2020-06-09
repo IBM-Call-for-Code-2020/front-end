@@ -1,4 +1,6 @@
 import React, { useCallback } from 'react'
+import Button from 'component/login/Social'
+import { Info } from 'module/login/Text'
 
 function LoginSocialContainer(props) {
   const { onLogin = () => {} } = props
@@ -12,24 +14,40 @@ function LoginSocialContainer(props) {
     [onLogin],
   )
 
+  const data = [
+    {
+      name: 'naver',
+      logo:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkRUxY9sWn5bdNgfhcNoRP-51d2V7Avln6kakXPYC2YESyVYZN&usqp=CAU',
+      color: {
+        background: '#03C73C',
+      },
+    },
+    {
+      name: 'google',
+      logo:
+        'https://www.freepngimg.com/thumb/google/67060-play-photos-search-google-account-png-file-hd.png',
+      color: {
+        background: '#4385F5',
+      },
+    },
+    {
+      name: 'kakao',
+      logo:
+        'https://upload.wikimedia.org/wikipedia/commons/f/f2/Kakao_logo.jpg',
+      color: {
+        background: '#FAE300',
+      },
+    },
+  ]
+
   return (
     <div>
-      <span>Or login with</span>
+      <Info>Or login with</Info>
 
-      <div onClick={() => onClick('naver')}>
-        <img src="https://placekitten.com/50/50" alt="naver logo" />
-        <span>login with naver</span>
-      </div>
-
-      <div onClick={() => onClick('google')}>
-        <img src="https://placekitten.com/50/50" alt="google logo" />
-        <span>login with google</span>
-      </div>
-
-      <div onClick={() => onClick('kakao')}>
-        <img src="https://placekitten.com/50/50" alt="kakao logo" />
-        <span>login with kakao</span>
-      </div>
+      {data.map((_i, i) => (
+        <Button onLogin={onClick} data={_i} key={Number(i)} />
+      ))}
     </div>
   )
 }

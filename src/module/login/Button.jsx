@@ -17,4 +17,19 @@ const LoginFormButtonModule = styled.button`
   }
 `
 
-export default LoginFormButtonModule
+const LoginSocialButtonModule = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: ${(props) => props.color.background};
+  color: #000;
+  border: none;
+  font-size: 17px;
+  font-weight: 900;
+  width: calc(100% - 30px);
+  margin: 0 15px 15px 15px;
+  padding: 10px 5px;
+`
+
+export { LoginFormButtonModule as Button, LoginSocialButtonModule as Login }
