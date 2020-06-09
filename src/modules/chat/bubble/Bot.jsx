@@ -12,6 +12,12 @@ const ChatBubbleBotModule = styled(Bubble)`
   background-origin: border-box;
   background-clip: content-box, border-box;
 
+  &:only-child {
+    margin-left: 45px;
+  }
+
+  margin-top: ${({ first }) => (first ? '20px' : 0)};
+
   ${({ loading }) =>
     loading &&
     `
