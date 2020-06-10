@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import Bot from 'components/chat/bubble/Bot'
-import User from 'components/chat/bubble/User'
+import Chat from 'components/chat/bubble'
 
 function ChatListsContainer(props) {
   const [data, setData] = useState([
@@ -46,17 +45,7 @@ function ChatListsContainer(props) {
   return (
     <div>
       {data.map((_i, i) => (
-        <div key={Number(i)}>
-          {_i.chat === 'bot' ? (
-            _i.content.map((_j, j) => (
-              <Bot key={Number(j)} first={j === 0} index={j}>
-                {_j.content}
-              </Bot>
-            ))
-          ) : (
-            <User>{_i.content[0].content}</User>
-          )}
-        </div>
+        <Chat key={Number(i)} data={_i} />
       ))}
     </div>
   )
