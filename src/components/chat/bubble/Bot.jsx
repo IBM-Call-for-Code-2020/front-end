@@ -34,7 +34,7 @@ function ChatBubbleBotComponent(props) {
   return (
     <Row>
       {first ? <Image src={logo} /> : ''}
-      <Bubble loading={loadingStatus === 1} first={first}>
+      <Bubble loading={loadingStatus === 1 ? 'true' : null} first={first}>
         {loadingStatus === 2 ? <Content>{children}</Content> : <Loading />}
       </Bubble>
     </Row>
