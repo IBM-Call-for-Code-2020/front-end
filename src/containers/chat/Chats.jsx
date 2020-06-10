@@ -9,11 +9,9 @@ const data = [
       {
         content:
           'Hi there! I am Carbon Kim, here to help with your carbon tax support.',
-        loading: false,
       },
       {
         content: 'What can I help you with today?',
-        loading: false,
       },
     ],
   },
@@ -31,11 +29,14 @@ const data = [
       {
         content:
           'Hi there! I am Carbon Kim, here to help with your carbon tax support. What can I help you with today?',
-        loading: false,
       },
       {
-        content: 'lorem ipsum',
-        loading: true,
+        content:
+          'Hi there! I am Carbon Kim, here to help with your carbon tax support. What can I help you with today?',
+      },
+      {
+        content:
+          'Hi there! I am Carbon Kim, here to help with your carbon tax support. What can I help you with today?',
       },
     ],
   },
@@ -48,7 +49,7 @@ function ChatListsContainer(props) {
         <div key={Number(i)}>
           {_i.chat === 'bot' ? (
             _i.content.map((_j, j) => (
-              <Bot key={Number(j)} loading={_j.loading} first={j === 0}>
+              <Bot key={Number(j)} first={j === 0} index={j}>
                 {_j.content}
               </Bot>
             ))
