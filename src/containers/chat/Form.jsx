@@ -1,10 +1,12 @@
 import React from 'react'
+import Input from 'components/chat/form/Input'
+import Button from 'components/chat/form/Button'
 
 function ChatFormContainer(props) {
   return (
     <form>
-      <input type="text" />
-      <button>입력</button>
+      <Input />
+      <Button />
     </form>
   )
 }
