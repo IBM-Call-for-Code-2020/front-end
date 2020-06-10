@@ -14,17 +14,21 @@ function ChatBubbleBotComponent(props) {
   useEffect(() => {
     // 0
     if (!index) {
-      setLoadingStatus(2)
+      setLoadingStatus(1)
+
+      setTimeout(() => {
+        setLoadingStatus(2)
+      }, 1500)
       return
     }
 
     setTimeout(() => {
       setLoadingStatus(1)
-    }, 2300 * (index - 1))
+    }, 1500 + 2300 * (index - 1))
 
     setTimeout(() => {
       setLoadingStatus(2)
-    }, 2000 * index)
+    }, 1500 + 2000 * index)
   }, [index])
 
   if (loadingStatus === 0) {
