@@ -54,6 +54,8 @@ describe('Form', () => {
         },
       ],
     })
+
+    expect(input).toHaveAttribute('value', '')
   })
 
   it('when chat is typing disable input', () => {

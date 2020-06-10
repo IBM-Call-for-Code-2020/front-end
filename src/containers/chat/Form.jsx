@@ -17,6 +17,7 @@ function ChatFormContainer(props) {
           },
         ],
       })
+      setUserText('')
     },
     [userText],
   )
