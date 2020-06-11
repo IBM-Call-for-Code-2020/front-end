@@ -39,6 +39,10 @@ function ChatBubbleBotComponent(props) {
     }, 1500 + 2000 * index)
   }, [index])
 
+  useEffect(() => {
+    window.scrollTo(0, window.innerHeight)
+  }, [loadingStatus])
+
   if (loadingStatus === 0) {
     return <div />
   }
