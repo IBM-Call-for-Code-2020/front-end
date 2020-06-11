@@ -60,6 +60,13 @@ function LoginFormContainer(props) {
         icon={MdLock}
       />
 
+      <select>
+        <option value="kor">한국어</option>
+        <option value="eng">English</option>
+        <option value="jpn">日本語</option>
+        <option value="chn">日語</option>
+      </select>
+
       <Remember onToggle={onToggle} show={remember} />
 
       <Button />
