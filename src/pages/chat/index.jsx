@@ -12,10 +12,7 @@ function ChatPage() {
       content: [
         {
           content:
-            'Hi there! I am Carbon Kim, here to help with your carbon tax support.',
-        },
-        {
-          content: 'What can I help you with today?',
+            '반가워요!\n 저는 탄소세 정보를 알려드리는 김탄소라고 해요!\n궁금한게 있으시다면 제게 물어보세요!',
         },
       ],
     },
