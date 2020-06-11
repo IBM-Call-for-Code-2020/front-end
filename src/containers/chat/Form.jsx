@@ -9,14 +9,7 @@ function ChatFormContainer(props) {
   const handleSubmit = useCallback(
     (e) => {
       e.preventDefault()
-      onSubmit({
-        chat: 'user',
-        content: [
-          {
-            content: userText,
-          },
-        ],
-      })
+      onSubmit(userText)
       setUserText('')
     },
     [userText],
