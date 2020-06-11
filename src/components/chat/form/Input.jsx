@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react'
+import Input from 'modules/chat/form/Input'
 
 function ChatFormInputComponent(props) {
   const { value, onChange, disabled } = props
@@ -8,7 +9,7 @@ function ChatFormInputComponent(props) {
   }, [])
 
   return (
-    <input
+    <Input
       type="text"
       placeholder="Add text to this message"
       value={value}

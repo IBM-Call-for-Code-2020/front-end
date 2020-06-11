@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import Input from 'components/chat/form/Input'
 import Button from 'components/chat/form/Button'
+import Form from 'modules/chat/form'
 
 function ChatFormContainer(props) {
   const { onSubmit = () => {}, isLoading } = props
@@ -20,10 +21,10 @@ function ChatFormContainer(props) {
   }, [])
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <Input value={userText} onChange={onChange} disabled={isLoading} />
       <Button />
-    </form>
+    </Form>
   )
 }
 

@@ -1,7 +1,13 @@
 import React from 'react'
+import Button from 'modules/chat/form/Button'
+import { MdSend } from 'react-icons/md'
 
 function ChatFormButtonComponent(props) {
-  return <button data-testid="button">입력</button>
+  return (
+    <Button data-testid="button">
+      <MdSend />
+    </Button>
+  )
 }
 
 export default ChatFormButtonComponent
