@@ -9,6 +9,7 @@ const ChatBubbleModule = styled.div`
   width: fit-content;
   max-width: 220px;
   word-break: keep-all;
+  white-space: pre-line;
 `
 
 const ChatBubbleContentModule = styled.div``
