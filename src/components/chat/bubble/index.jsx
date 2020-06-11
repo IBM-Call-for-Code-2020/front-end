@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import Bot from './Bot'
 import User from './User'
 
 function ChatContainer(props) {
-  const { data } = props
+  const { data, onClick = () => {} } = props
   const { chat = '', content = [{ content: '', response: [] }] } = data
+
+  const handleClick = useCallback(
+    (e) => {
+      onClick(e)
+    },
+    [content],
+  )
 
   return (
     <div>
@@ -15,6 +22,7 @@ function ChatContainer(props) {
             first={j === 0}
             index={j}
             response={content[0].response}
+            onClick={handleClick}
           >
             {_j.content}
           </Bot>

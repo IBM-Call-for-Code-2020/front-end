@@ -8,9 +8,16 @@ import logo from 'static/logo.svg'
 import { Buttons, Button } from 'modules/chat/bubble/Button'
 
 function ChatBubbleBotComponent(props) {
-  const { children = '', first = true, index = 0, response = [] } = props
+  const {
+    children = '',
+    first = true,
+    index = 0,
+    response = [],
+    onClick = () => {},
+  } = props
 
   const [loadingStatus, setLoadingStatus] = useState(0)
+  const [showBtn, setShowBtn] = useState(true)
 
   useEffect(() => {
     // 0
@@ -36,7 +43,10 @@ function ChatBubbleBotComponent(props) {
     return <div />
   }
 
-  console.log(response)
+  const handleClick = (e) => {
+    onClick(e)
+    setShowBtn(false)
+  }
 
   return (
     <Chat>
@@ -45,10 +55,12 @@ function ChatBubbleBotComponent(props) {
         <Bubble loading={loadingStatus === 1 ? 'true' : null} first={first}>
           {loadingStatus === 2 ? <Content>{children} </Content> : <Loading />}
 
-          {response.length && loadingStatus === 2 ? (
+          {response.length && loadingStatus === 2 && showBtn ? (
             <Buttons>
               {response.map((_i, i) => (
-                <Button key={Number(i)}>{_i.label}</Button>
+                <Button onClick={() => handleClick(_i.text)} key={Number(i)}>
+                  {_i.label}
+                </Button>
               ))}
             </Buttons>
           ) : (
