@@ -25,8 +25,12 @@ const ChatBubbleBotModule = styled(Bubble)`
     height: 40px;
    `}
 
-  div {
-    padding: 11px 14px;
+  div:first-child {
+    padding: 11px 14px !important;
+  }
+
+  div:last-child {
+    padding: 0 14px 11px 14px;
   }
 `
 

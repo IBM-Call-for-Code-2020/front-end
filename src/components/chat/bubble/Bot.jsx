@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Row from 'modules/chat/bubble/Row'
 import Bubble from 'modules/chat/bubble/Bot'
-import { Content } from 'modules/chat/bubble'
+import { Chat, Content } from 'modules/chat/bubble'
 import Loading from 'modules/chat/bubble/Loading'
 import Image from 'modules/chat/bubble/Image'
 import logo from 'static/logo.svg'
+import { Buttons, Button } from 'modules/chat/bubble/Button'
 
 function ChatBubbleBotComponent(props) {
-  const { children = '', first = true, index = 0 } = props
+  const { children = '', first = true, index = 0, response = [] } = props
 
   const [loadingStatus, setLoadingStatus] = useState(0)
 
@@ -35,13 +36,27 @@ function ChatBubbleBotComponent(props) {
     return <div />
   }
 
+  console.log(response)
+
   return (
-    <Row>
-      {first ? <Image src={logo} /> : ''}
-      <Bubble loading={loadingStatus === 1 ? 'true' : null} first={first}>
-        {loadingStatus === 2 ? <Content>{children}</Content> : <Loading />}
-      </Bubble>
-    </Row>
+    <Chat>
+      <Row>
+        {first ? <Image src={logo} /> : ''}
+        <Bubble loading={loadingStatus === 1 ? 'true' : null} first={first}>
+          {loadingStatus === 2 ? <Content>{children} </Content> : <Loading />}
+
+          {response.length && loadingStatus === 2 ? (
+            <Buttons>
+              {response.map((_i, i) => (
+                <Button key={Number(i)}>{_i.label}</Button>
+              ))}
+            </Buttons>
+          ) : (
+            ''
+          )}
+        </Bubble>
+      </Row>
+    </Chat>
   )
 }
 

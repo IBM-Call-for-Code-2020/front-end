@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+const ChatContainerModule = styled.div`
+  margin-bottom: 18px;
+`
+
 const ChatBubbleModule = styled.div`
   color: #363a44;
   width: fit-content;
@@ -9,4 +13,8 @@ const ChatBubbleModule = styled.div`
 
 const ChatBubbleContentModule = styled.div``
 
-export { ChatBubbleModule as Bubble, ChatBubbleContentModule as Content }
+export {
+  ChatContainerModule as Chat,
+  ChatBubbleModule as Bubble,
+  ChatBubbleContentModule as Content,
+}
