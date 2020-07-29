@@ -13,7 +13,7 @@ function ChatFormContainer(props) {
       onSubmit(userText)
       setUserText('')
     },
-    [userText],
+    [userText, onSubmit],
   )
 
   const onChange = useCallback((e) => {

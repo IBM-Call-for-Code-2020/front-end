@@ -5,8 +5,7 @@ import Form from 'containers/login/Form'
 import Social from 'containers/login/Social'
 
 function LoginPage() {
-  const onLogin = useCallback((e) => {
-    console.log(e)
+  const onLogin = useCallback(() => {
     window.location.href = '/chat'
   }, [])
 

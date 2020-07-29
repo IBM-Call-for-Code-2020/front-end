@@ -4,9 +4,12 @@ import Input from 'modules/chat/form/Input'
 function ChatFormInputComponent(props) {
   const { value, onChange, disabled } = props
 
-  const handleChange = useCallback((e) => {
-    onChange(e.target.value)
-  }, [])
+  const handleChange = useCallback(
+    (e) => {
+      onChange(e.target.value)
+    },
+    [onChange],
+  )
 
   return (
     <Input

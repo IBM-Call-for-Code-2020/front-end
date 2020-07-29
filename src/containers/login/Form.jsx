@@ -29,7 +29,7 @@ function LoginFormContainer(props) {
 
   const onToggle = useCallback(
     (e) => setLoginFrmData({ ...loginFrmData, remember: e }),
-    [],
+    [loginFrmData],
   )
 
   const onSubmit = useCallback(
@@ -38,7 +38,7 @@ function LoginFormContainer(props) {
       onLogin(loginFrmData)
       setLoginFrmData(inital)
     },
-    [inital],
+    [inital, loginFrmData, onLogin],
   )
 
   return (
