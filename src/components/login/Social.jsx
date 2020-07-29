@@ -18,7 +18,7 @@ function LoginSocialButtonComponent(props) {
 
   const onClick = useCallback(() => {
     onLogin(name)
-  }, [name])
+  }, [name, onLogin])
 
   return (
     <Button onClick={onClick} color={color}>

@@ -5,9 +5,12 @@ import Date from 'components/chat/Date'
 function ChatListsContainer(props) {
   const { data = [], onClick = () => {} } = props
 
-  const handleClick = useCallback((e) => {
-    onClick(e)
-  }, [])
+  const handleClick = useCallback(
+    (e) => {
+      onClick(e)
+    },
+    [onClick],
+  )
 
   return (
     <div>

@@ -12,7 +12,7 @@ function ChatPage() {
       content: [
         {
           content:
-            '반가워요!\n 저는 탄소세 정보를 알려드리는 김탄소라고 해요!\n궁금한게 있으시다면 제게 물어보세요!',
+            "Nice to meet you!\nI'm giving carbon tax information!\n If you have any questions, ask me!",
         },
       ],
     },
@@ -20,7 +20,7 @@ function ChatPage() {
 
   const addChat = useCallback(
     (chat) => setData((prevState) => [...prevState, chat]),
-    [data],
+    [],
   )
 
   const getData = (text) => {

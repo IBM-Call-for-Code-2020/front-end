@@ -10,7 +10,7 @@ function ChatContainer(props) {
     (e) => {
       onClick(e)
     },
-    [content],
+    [onClick],
   )
 
   return (
