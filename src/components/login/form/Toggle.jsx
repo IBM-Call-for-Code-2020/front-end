@@ -5,7 +5,7 @@ import { Toggle, Indicator } from 'modules/login/form/Toggle'
 function LoginFormRememberComponent(props) {
   const { onToggle = () => {}, show = false } = props
 
-  const onClick = useCallback(() => onToggle(!show), [show])
+  const onClick = useCallback(() => onToggle(!show), [onToggle, show])
 
   return (
     <Toggle onClick={onClick}>

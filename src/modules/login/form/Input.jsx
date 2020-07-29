@@ -5,12 +5,9 @@ const LoginInputContainerModule = styled.div`
   align-items: center;
   color: #909090;
   font-size: 20px;
-  border: solid 2px;
+  border: solid 2px #aaffa9;
   border-radius: 50px;
-  border-image-source: linear-gradient(to top, #aaffa9, #11ffbd);
   border-image-slice: 1;
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff),
-    linear-gradient(to top, #aaffa9, #11ffbd);
   background-origin: border-box;
   background-clip: content-box, border-box;
   margin-bottom: 22px;

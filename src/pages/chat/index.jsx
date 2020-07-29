@@ -20,7 +20,7 @@ function ChatPage() {
 
   const addChat = useCallback(
     (chat) => setData((prevState) => [...prevState, chat]),
-    [data],
+    [],
   )
 
   const getData = (text) => {
