@@ -4,7 +4,6 @@ import Bubble from 'modules/chat/bubble/Bot'
 import { Chat, Content } from 'modules/chat/bubble'
 import Loading from 'modules/chat/bubble/Loading'
 import Image from 'modules/chat/bubble/Image'
-import logo from 'static/logo.svg'
 import { Buttons, Button } from 'modules/chat/bubble/Button'
 
 function ChatBubbleBotComponent(props) {
@@ -55,7 +54,7 @@ function ChatBubbleBotComponent(props) {
   return (
     <Chat>
       <Row>
-        {first ? <Image src={logo} /> : ''}
+        {first ? <Image src="/static/logo.svg" /> : ''}
         <Bubble loading={loadingStatus === 1 ? 'true' : null} first={first}>
           {loadingStatus === 2 ? <Content>{children} </Content> : <Loading />}
 
